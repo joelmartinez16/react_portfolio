@@ -4,7 +4,7 @@ import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import NavBar from "./components/NavBar";
 import Contact from "./components/Contact"
-
+import Resume from "./components/Resume"
 function App() {
   const components =[<AboutMe/>, <Projects/>, <Contact/>]
   const [page, setPage]= useState(components[0])
