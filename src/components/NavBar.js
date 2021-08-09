@@ -1,23 +1,48 @@
 import React from "react";
-import { Nav, Navbar, Container } from 'react-bootstrap';
+import {
+  MDBNavbarBrand,
+  MDBNavbar,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBIcon
+} from "mdbreact";
 
 export default function NavBar(props) {
-    return (
-        
-        <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="AboutMe" onClick= {()=>props.setPage(props.components[0])}>About Me</Nav.Link>
-              <Nav.Link href="Contact"onClick= {()=>props.setPage(props.components[0])}>Contact</Nav.Link>
-              <Nav.Link href="Projects"onClick= {()=>props.setPage(props.components[0])}>Projects</Nav.Link>
-              <Nav.Link href="Resume"onClick= {()=>props.setPage(props.components[0])}de>Resume</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      
-    )
+  return (
+
+    <MDBNavbar
+      color="pink"
+      dark
+      expand="md"
+      style={{ width: "100%" }}
+
+    >
+      <MDBNavbarBrand />
+
+      <strong className="white-text">Joel Martinez</strong>
+
+      <MDBNavbarNav right center>
+
+        <MDBNavItem>
+          <strong className="white-text">
+            <ul>
+              <MDBIcon icon="home" className="mr-1" />
+              <li onClick={() => props.setPage(props.components[0])}>
+                About Me
+              </li>
+              <MDBIcon fab icon="codepen" className="mr-1" />
+              <li onClick={() => props.setPage(props.components[1])}>
+                Projects
+              </li>
+              <MDBIcon icon="envelope" className="mr-1" />
+              <li onClick={() => props.setPage(props.components[2])}>
+                Contact
+              </li>
+            </ul>
+          </strong>
+
+        </MDBNavItem>
+      </MDBNavbarNav>
+    </MDBNavbar>
+  )
 }
