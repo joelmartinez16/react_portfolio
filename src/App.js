@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import NavBar from "./components/NavBar";
 import Contact from "./components/Contact"
 import Resume from "./components/Resume"
+import Footer from "./components/Footer"
 
 export default function App() {
   const components =[<AboutMe/>, <Projects/>, <Contact/>, <Resume/>]
@@ -12,7 +13,10 @@ export default function App() {
     <div className="App">
       <NavBar setPage= {setPage} components = {components}/>
       {page}
+      <Footer/>
     </div>
+     
+    
   );
 }
 

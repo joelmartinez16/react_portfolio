@@ -1,7 +1,9 @@
 import React from "react";
+import ProfessionalResume from "../assets/Images/ProfessionalResume.png"
 
 export default function Resume() {
     return (
-        <h1>Resume</h1>
+      
+          <img src = {ProfessionalResume} className = "resume"/>
     )
 }
