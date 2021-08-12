@@ -33,10 +33,12 @@ export default function Projects() {
         <MDBCard className="border border-dark">
           <img src={Recipedia} style={{ width: "485px" }} alt="BARbit" top className="img-fluid" />
           <h4>Recipedia</h4>
+          <MDBCardBody>
           <MDBCardText>
             This application allows users to search for a recipe by searching a certain ingredient.
           </MDBCardText>
           
+          </MDBCardBody> 
         </MDBCard>
         <MDBCard className="border border-dark">
           <img src={WorkDaySchedule} style={{ width: "485px" }} alt="BARbit" top className="img-fluid" />
